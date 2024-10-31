@@ -43,7 +43,8 @@ export const progress = (() => {
     };
 
     const run = async () => {
-        document.querySelectorAll('img').forEach((asset) => {
+        document.querySelectorAll('img').forEach((asset, index) => {
+            console.log('asset ' ,  index , asset)
             asset.onerror = () => {
                 invalid('image');
             };
